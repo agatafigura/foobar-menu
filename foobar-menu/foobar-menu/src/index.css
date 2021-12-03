@@ -1,19 +1,21 @@
 /*fonts*/
 @font-face {
   font-family: "barlow-light";
-  src: url("../../FooBar/assets/BarlowCondensed-Light.woff") format("woff");
+  src: url("fonts/BarlowCondensed-Light.ttf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "barlow-regular";
-  src: url("../../FooBar/assets/BarlowCondensed-Regular.woff") format("woff");
+  src: url("fonts/BarlowCondensed-Regular.ttf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "barlow-semiBold";
-  src: url("../../FooBar/assets/BarlowCondensed-SemiBold.woff") format("woff");
+  src: url("fonts/BarlowCondensed-SemiBold.ttf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -47,7 +49,7 @@ body {
 
 /*header*/
 
-header {
+.header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -55,17 +57,17 @@ header {
   height: 7vh;
 }
 
-#logo {
+.logo {
   width: 15vw;
 }
 
-#switch {
+.switch {
   width: 6vw;
 }
 
 /*main*/
 
-main {
+.main {
   display: grid;
   grid-template-columns: 3fr 1fr;
   height: 80vh;
@@ -75,13 +77,13 @@ main {
 
 /*menu*/
 
-#categories {
+.categories {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
 }
 
-#categories h2 {
+.categories h2 {
   font-family: var(--light);
   color: var(--dark-grey)
 }
@@ -342,17 +344,17 @@ main {
     overflow-y: auto;
   }
 
-  #logo {
+  .logo {
     width: 40vw;
   }
 
-  #switch {
+  .switch {
     display: none;
   }
 
   /*header*/
 
-  header {
+  .header {
     justify-content: center;
   }
 
@@ -380,11 +382,12 @@ main {
 
   /*main*/
 
-  main {
+  .main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 3fr 1fr; 
     height: 90vh;
+    margin-top: 30px;
   }
 
   #products {
@@ -460,7 +463,7 @@ main {
     border-top: 1px solid var(--light-grey);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   #order h1 {
