@@ -4,9 +4,9 @@ import Order from "./Order";
 
 export default function Main() {
     return(
-      <div className="main">
-        <Menu/>
-        <Order/>
-      </div>
+        <div className="main">
+          <Menu/>
+          <Order/>
+        </div>
     )
   }

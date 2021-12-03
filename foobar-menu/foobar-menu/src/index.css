@@ -336,6 +336,148 @@ body {
   cursor: pointer;
 }
 
+/*pop-up*/
+
+#pop-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 80vh;
+  background-color: var(--section-background);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  filter: drop-shadow(5px 5px 5px var(--dark-grey));
+}
+
+.beer-bg {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vw;
+  justify-content: center;
+}
+
+.beer-bg::after {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 50%;
+  height: 100%;
+  background-image: url(img/beer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  border-radius: 15px;
+  z-index: -1;
+}
+
+.beer-bg h1 {
+  font-family: var(--semiBold);
+  color: var(--dark-grey);
+  margin-top: 2vw;
+  margin-left: 2vw;
+  font-size: 4vw;
+}
+
+.beer-bg hr {
+  width: 25vw;
+  margin-left: 2vw;
+  color: var(--dark-grey);
+}
+
+.beer-bg .icons  {
+  display: flex;
+  column-gap: 2vw;
+  margin-left: 2vw;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  column-gap: 1vw;
+}
+
+.icons h3 {
+  font-family: var(--regular);
+  color: var(--dark-grey);
+}
+
+.beer-bg #bottle-icon {
+  width: 1.5vw;
+}
+
+.beer-bg #circle-icon {
+  width: 4.5vw;
+}
+
+.info1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2vw;
+  row-gap: 1vw;
+}
+
+.info2 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vw;
+}
+
+#pop-up h2 {
+  font-family: var(--semiBold);
+  color: var(--dark-grey);
+}
+
+#pop-up h2 span {
+  font-family: var(--light);
+}
+
+#pop-up p {
+  font-family: var(--light);
+  color: var(--dark-grey);
+  width: 20vw;
+}
+
+.bottle-img {
+  background-image: url(img/bottles/elhefe.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(10deg);
+}
+
+.plain-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 7vw;
+}
+
+.dark::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.7;
+}
+
+#close-popup {
+  position: absolute;
+  width: 2vw;
+  top: 2vw;
+  right: 2vw;
+  cursor: pointer;
+}
+
 /*mobile view*/
 
 @media only screen and (max-width: 767px) {
@@ -503,5 +645,98 @@ body {
     background-image: url(img/icons/arrow-down.svg);
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  /*pop-up*/
+
+  #pop-up {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vw;
+    padding-top: 35vw;
+    border-radius: 0;
+    position: fixed;
+  }
+
+  .beer-bg {
+    background-color: var(--section-background);
+    justify-content: flex-start;
+    row-gap: 5vw;
+    margin-top: 5vw;
+    margin-left: 5vw;
+  }
+
+  .beer-bg::after {
+    background-image: none;
+    height: 0;
+  }
+
+  .beer-bg h1 {
+    font-size: 7vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-75%);
+    top: 13vw;
+    z-index: 1;
+    color: var(--brown);
+    font-family: var(--regular);
+  }
+
+  .bottle-container {
+    width: 30vw;
+    height: 30vw;
+    background-color: var(--yellow);
+    position: absolute;
+    top: 5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+  }
+
+  .bottle-img {
+    top: -1vw;
+    left: 22vw;
+    transform: none;
+  }
+
+  .beer-bg .icons {
+    column-gap: 5vw;
+    margin-bottom: 2vw;
+  }
+
+  .beer-bg #bottle-icon {
+    width: 5vw;
+  }
+
+  .beer-bg #circle-icon {
+    width: 15vw;
+  }
+
+  #pop-up p {
+    width: 90%;
+  }
+
+  #pop-up hr {
+    color: transparent;
+  }
+
+  .plain-bg {
+    margin-left: 7vw;
+  }
+
+  .info1 {
+    row-gap: 5vw;
+  }
+
+  .info2 {
+    row-gap: 5vw;
+  }
+
+  #close-popup {
+    width: 5vw;
+    top: 3vw;
+    right: 3vw;
   }
 }

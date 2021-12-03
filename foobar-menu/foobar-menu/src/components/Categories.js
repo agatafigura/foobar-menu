@@ -46,7 +46,7 @@ export default function Categories() {
           <div id="arrow" className="down" onClick={toggleList}></div>
         </div>
         <div id="alc-level" className="category" onClick={sort}>
-          <h2>Beer Types</h2>
+          <h2>Alc. level</h2>
           <div id="arrow2" className="down2"></div>
         </div>
       </div>
