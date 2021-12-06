@@ -57,12 +57,34 @@ body {
   height: 7vh;
 }
 
-.logo {
+#logo {
   width: 15vw;
+  height: 6vw;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.switch {
+.light-logo {
+  background-image: url(img/icons/logo.png);
+}
+
+.dark-logo {
+  background-image: url(img/icons/FooBar-logo2.png);
+}
+
+#switch {
   width: 6vw;
+  height: 3vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.light-mode {
+  background-image: url(img/icons/switch.png);
+}
+
+.dark-mode {
+  background-image: url(img/icons/FooBar-switch2.png);
 }
 
 /*main*/
@@ -99,35 +121,47 @@ body {
   width: 1.5vw;
   height: 1.5vw;
   margin-top: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .down {
   background-image: url(img/icons/arrow-down.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
+}
+
+.down-darkmode {
+  background-image: url(img/icons/arrow-down-darkmode.svg);
 }
 
 .up {
   background-image: url(img/icons/arrow-up.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
+}
+
+.up-darkmode {
+  background-image: url(img/icons/arrow-up-darkmode.svg);
 }
 
 #arrow2 {
   width: 1.5vw;
   height: 1.5vw;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .down2 {
   background-image: url(img/icons/arrow2-down.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
+}
+
+.down2-darkmode {
+  background-image: url(img/icons/arrow2-down-darkmode.svg);
 }
 
 .up2 {
   background-image: url(img/icons/arrow2-up.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
+}
+
+.up2-darkmode {
+  background-image: url(img/icons/arrow2-up-darkmode.svg);
 }
 
 #beer-types-elements {
@@ -153,8 +187,8 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 40px;
-  margin-left: 40px;
+  margin-top: 2vw;
+  margin-left: 2vw;
   flex-wrap: wrap;
   row-gap: 40px;
 }
@@ -212,18 +246,35 @@ body {
   border-left: none;
   border-right: none;
   border-bottom: none;
-  border-top: 2px solid var(--dark-grey);
   width: 5vw;
   font-family: var(--regular);
-  color: var(--dark-grey);
   font-size: 1.3vw;
   cursor: pointer;
+}
+
+.button-darkmode {
+  border-top: 2px solid var(--background-light);
+  color: var(--background-light);
+}
+
+.button-lightmode {
+  border-top: 2px solid var(--dark-grey);
+  color: var(--dark-grey);
 }
 
 /*order*/
 
 #open-order {
   display: none;
+}
+
+#order {
+  background-color: var(--section-background);
+  border-radius: 15px;
+  margin-right: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  width: 24vw;
 }
 
 #order h1 {
@@ -244,6 +295,13 @@ body {
   scrollbar-width: thin;
   scrollbar-color: var(--dark-grey) var(--light-grey);
   margin-right: 5px;
+  background-color: var(--background-light);
+  width: 20vw;
+  margin-left: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  border-radius: 10px;
+  
 }
 
 .your-product {
@@ -328,10 +386,8 @@ body {
   border-left: none;
   border-right: none;
   border-bottom: none;
-  border-top: 2px solid var(--dark-grey);
   width: 7vw;
   font-family: var(--semiBold);
-  color: var(--dark-grey);
   font-size: 1.5vw;
   cursor: pointer;
 }
@@ -349,7 +405,7 @@ body {
   border-radius: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  filter: drop-shadow(5px 5px 5px var(--dark-grey));
+  filter: drop-shadow(2px 2px 2px var(--dark-grey));
 }
 
 .beer-bg {
@@ -373,12 +429,29 @@ body {
   z-index: -1;
 }
 
+.beer-dark::after {
+  opacity: 0.75;
+}
+
 .beer-bg h1 {
   font-family: var(--semiBold);
   color: var(--dark-grey);
   margin-top: 2vw;
   margin-left: 2vw;
   font-size: 4vw;
+}
+
+.name-price h2 {
+  padding-bottom: 1vw;
+  font-family: var(--regular);
+  color: var(--dark-grey);
+}
+
+.name-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 27vw;
 }
 
 .beer-bg hr {
@@ -399,13 +472,45 @@ body {
   column-gap: 1vw;
 }
 
+#bottle-icon {
+  width: 7vw;
+  height: 7vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#circle-icon {
+  width: 4vw;
+  height: 4vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bottle-icon-lightmode {
+  background-image: url(img/icons/bottle.svg);
+}
+
+.bottle-icon-darkmode {
+  background-image: url(img/icons/bottle-darkmode.svg);
+}
+
+.circle-icon-lightmode {
+  background-image: url(img/icons/circle.svg);
+}
+
+.circle-icon-darkmode {
+  background-image: url(img/icons/circle-darkmode.svg);
+}
+
+
+
 .icons h3 {
   font-family: var(--regular);
   color: var(--dark-grey);
 }
 
 .beer-bg #bottle-icon {
-  width: 1.5vw;
+  width: 2vw;
 }
 
 .beer-bg #circle-icon {
@@ -425,7 +530,7 @@ body {
   row-gap: 1vw;
 }
 
-#pop-up h2 {
+.info1 h2, .info2 h2 {
   font-family: var(--semiBold);
   color: var(--dark-grey);
 }
@@ -434,7 +539,7 @@ body {
   font-family: var(--light);
 }
 
-#pop-up p {
+.info1 p, .info2 p {
   font-family: var(--light);
   color: var(--dark-grey);
   width: 20vw;
@@ -473,9 +578,20 @@ body {
 #close-popup {
   position: absolute;
   width: 2vw;
+  height: 2vw;
   top: 2vw;
   right: 2vw;
   cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.close-lightmode {
+  background-image: url(img/icons/close.svg);
+}
+
+.close-darkmode {
+  background-image: url(img/icons/close-darkmode.svg);
 }
 
 /*mobile view*/
@@ -486,11 +602,12 @@ body {
     overflow-y: auto;
   }
 
-  .logo {
+  #logo {
     width: 40vw;
+    height: 20vw;
   }
 
-  .switch {
+  #switch {
     display: none;
   }
 
@@ -534,11 +651,17 @@ body {
 
   #products {
     justify-content: center;
+    align-items: center;
     margin-top: 30px;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
   }
   
   .product {
     flex-basis: 50%;
+    width: 45vw;
   }
 
   .square {
@@ -673,15 +796,26 @@ body {
     height: 0;
   }
 
-  .beer-bg h1 {
+  .name-price h1 {
     font-size: 7vw;
     position: absolute;
     left: 50%;
     transform: translateX(-75%);
-    top: 13vw;
+    top: 11vw;
     z-index: 1;
     color: var(--brown);
     font-family: var(--regular);
+  }
+
+  .name-price h2 {
+    color: var(--brown);
+    font-size: 4vw;
+    font-family: var(--light);
+    z-index: 1;
+    position: absolute;
+    left: 45%;
+    transform: translateX(-65%);
+    top: 22vw;
   }
 
   .bottle-container {

@@ -13,22 +13,25 @@ export default function PopUp() {
         <div id="pop-up" className="hidden">
             <div className="beer-bg">
                 <div class="title">
-                <h1>El Hefe</h1>
+                    <div className="name-price">
+                        <h1>El Hefe</h1>
+                        <h2>60 dkk</h2>
+                    </div>
                 <hr/>
                 </div>
                 <div className="icons">
                     <div className="icon">
-                        <img id="bottle-icon" src={bottle} alt="beer bottle icon"></img>
-                        <h3>Size</h3>
+                        <div id="bottle-icon" className="bottle-icon-lightmode"></div>
+                        <h3 id="size">Size</h3>
                     </div>
                     <div className="icon">
-                        <img id="circle-icon" src={circle} alt="circle icon"></img>
-                        <h3>Alc. level</h3>
+                        <div id="circle-icon" className="circle-icon-lightmode"></div>
+                        <h3 id="alcohol">Alc. level</h3>
                     </div>
                 </div>
                 <div className="info1">
-                    <h2>Category: <span>IPA</span></h2>
-                    <div>
+                    <h2 id="category">Category: <span>IPA</span></h2>
+                    <div id="overall-impression">
                     <h2>Overall impression:</h2>
                     <p>Refreshing wheat or rye beers that can display 
                     more hop character and less yeast character 
@@ -41,7 +44,7 @@ export default function PopUp() {
             </div>
             <div className="plain-bg">
                 <div className="info2">
-                    <div>
+                    <div id="aroma">
                         <h2>Aroma:</h2>
                         <p>Low to moderate grainy wheat or rye character.  
                     Some malty sweetness is acceptable.  
@@ -52,14 +55,14 @@ export default function PopUp() {
                      citrusy American or a spicy or floral noble hop character. 
                      Slight crisp sharpness is optional.  No diacetyl.</p>
                      </div>
-                    <div>
+                    <div id="mouthfeel">
                         <h2>Mouthfeel:</h2>
                         <p>Medium-light to medium body.  Medium-high to high
                     carbonation. May have a light alcohol warmth in stronger 
                     examples.</p>
                     </div>
                 </div>
-                <img id="close-popup" src={close} alt="close button" onClick={closePopUp}></img>
+                <div id="close-popup" className="close-lightmode" onClick={closePopUp}></div>
             </div>
         </div>
     )

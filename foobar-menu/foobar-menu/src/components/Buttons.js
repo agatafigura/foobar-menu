@@ -8,8 +8,8 @@ export default function Buttons() {
   }
     return(
       <div className="buttons">
-        <button className="read-more" onClick={openPopUp}>Read more</button>
-        <button className="add">Add</button>
+        <button className="button-lightmode" id="read-more" onClick={openPopUp}>Read more</button>
+        <button className="button-lightmode" id="add">Add</button>
       </div>
     )
   }
