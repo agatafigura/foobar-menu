@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import Categories from "./Categories";
 import Product from "./Product";
 
-export default function Menu(props) {
+export default function Menu(props, order) {
 
-  const mapped = props.beers.map((beer) => <Product addBeer={props.addBeer} addtoBasket={props.addtoBasket} key={beer.name} {...beer}/>);
+  const mapped = props.beers.map((beer) => <Product order={order} addBeer={props.addBeer} key={beer.name} {...beer}/>);
 
 
     return(

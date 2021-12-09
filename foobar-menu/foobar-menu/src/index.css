@@ -308,6 +308,7 @@ body {
   margin-right: 5px;
   background-color: var(--background-light);
   width: 20vw;
+  min-height: 50vh;
   margin-left: 2vw;
   padding-top: 1vw;
   padding-bottom: 1vw;
@@ -318,8 +319,13 @@ body {
 .your-product {
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
   column-gap: 20px;
+  padding-right: 1vw;
+}
+
+.negative {
+  display: none;
 }
 
 .product-details {
@@ -356,7 +362,6 @@ body {
   display: flex;
   column-gap: 0.7vw;
   align-items: center;
-  justify-content: center;
 }
 
 .amount p {

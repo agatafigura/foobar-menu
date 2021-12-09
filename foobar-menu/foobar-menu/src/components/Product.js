@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import PopUp from "./PopUp";
 
 export default function Product(props) {
+
   const [open, setOpen] = useState(false);
   function openPopUp() {
     setOpen(true);
@@ -19,8 +20,8 @@ export default function Product(props) {
         </div>
       </div>
       <div className="buttons">
-        <button className="button-lightmode" id="read-more" onClick={openPopUp} setOpen={setOpen} {...props}>Read more</button>
-        <button className="button-lightmode" id="add" onClick={() => props.addBeer(props)} {...props}>Add</button>
+        <button className="button-lightmode" id="read-more" onClick={openPopUp}>Read more</button>
+        <button className="button-lightmode" id="add" onClick={() => props.addBeer(props)}>Add</button>
       </div>
         {open && <PopUp  setOpen={setOpen} {...props}/>}
       </div>

@@ -4,20 +4,22 @@ import Menu from "./Menu";
 import Order from "./Order";
 
 export default function App() {
-  const [added, setAdded] = useState(false);
-  const [order, setOrder] = useState();
-  
+
+  const [order, setOrder] = useState([]);
+  console.log(order);
+
   function addBeer(selected) {
-    setAdded(true);
-    setOrder(selected);
+    setOrder(oldState=>oldState.concat(selected));
+    console.log(selected);
   }
-  const array = [];
-  array.push(order);
-  console.log(array);  
+  
+  
+  function removeBeer(name) {
+    setOrder(oldState=>oldState.filter(item=>item.name!==name));
+  }
 
 
   const [beers, setBeers] = useState([]);
-  console.log(beers);
 
   useEffect(() => {
     fetch("https://foobarpm.herokuapp.com/beertypes", {
@@ -35,8 +37,8 @@ export default function App() {
       <div className="App">
         <Header/>
         <div className="main">
-        <Menu beers={beers} addBeer={addBeer}/>
-        <Order order={order} added={added} setAdded={setAdded}/>
+        <Menu order={order} beers={beers} addBeer={addBeer}/>
+        <Order order={order} removeBeer={removeBeer}/>
         </div>
       </div>
       </>
