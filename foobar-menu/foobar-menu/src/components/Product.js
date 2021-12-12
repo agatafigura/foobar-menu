@@ -21,7 +21,7 @@ export default function Product(props) {
       </div>
       <div className="buttons">
         <button className="button-lightmode" id="read-more" onClick={openPopUp}>Read more</button>
-        <button className="button-lightmode" id="add" onClick={() => props.addBeer(props)}>Add</button>
+        <button className="button-lightmode" id="add" onClick={() => props.addBeer(props)} >Add</button>
       </div>
         {open && <PopUp  setOpen={setOpen} {...props}/>}
       </div>
