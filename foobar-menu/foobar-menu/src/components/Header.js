@@ -2,9 +2,10 @@ import React from "react";
 
 export default function Header() {
 
-  function switchMode () {
-    const switchButton = document.querySelector("#switch");
-    const logo = document.querySelector("#logo");
+  function switchMode() {
+    console.log("switch mode")
+    const switchButton = document.querySelector(".switch");
+    const logo = document.querySelector(".logo");
     const mobileView = window.matchMedia('(min-width: 768px');
     var buttons = document.querySelectorAll('.buttons button');
 
@@ -33,6 +34,19 @@ export default function Header() {
         document.querySelector("#arrow2").classList.remove("down2");
         document.querySelector("#arrow2").classList.remove("up2");
         document.querySelector("#arrow2").classList.add("down2-darkmode");
+        document.querySelector("#wrapper").classList.add("dark-wrapper");
+        document.querySelector("#form-wrapper").style.backgroundColor = "var(--dark-grey)";
+        document.querySelector(".cardName").style.color = "var(--background-light)";
+        document.querySelector(".cardNumber").style.color = "var(--background-light)";
+        document.querySelector(".expiryDate").style.color = "var(--background-light)";
+        document.querySelector(".securityCode").style.color = "var(--background-light)";
+        document.querySelector(".payButton").style.color = "var(--background-light)";
+        document.querySelector(".payButton").style.borderColor = "var(--background-light)";
+        document.querySelector(".payment-form span").style.color = "var(--background-light)";
+        document.querySelector(".paymentSwitch").classList.remove("light-mode");
+        document.querySelector(".paymentSwitch").classList.add("dark-mode");
+        document.querySelector(".paymentLogo").classList.remove("light-logo");
+        document.querySelector(".paymentLogo").classList.add("dark-logo");
         // document.querySelector(".beer-name").style.color = "var(--background-light)";
         // document.querySelector(".beer-price").style.color = "var(--background-light)";
         // document.querySelector(".beer-bg hr").style.color = "var(--background-light)";
@@ -80,6 +94,7 @@ export default function Header() {
         document.querySelector("#arrow2").classList.remove("down2-darkmode");
         document.querySelector("#arrow2").classList.remove("up2-darkmode");
         document.querySelector("#arrow2").classList.add("down2");
+        document.querySelector("#wrapper").classList.add("light-wrapper");
         // document.querySelector(".beer-name").style.color = "var(--dark-grey)";
         // document.querySelector(".beer-price").style.color = "var(--dark-grey)";
         // document.querySelector(".beer-bg hr").style.color = "var(--dark-grey)";
@@ -106,8 +121,8 @@ export default function Header() {
   }
     return (
       <div className="header">
-        <div id="logo" className="light-logo"></div>
-        <div id="switch" className="light-mode" onClick={switchMode}></div>
+        <div className="logo light-logo"></div>
+        <div className="switch light-mode" onClick={switchMode}></div>
       </div>
     )
   }

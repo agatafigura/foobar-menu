@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function Categories() {
+export default function Categories(props) {
 
  function toggleList() {
     const arrow = document.querySelector("#arrow");
     const beerList = document.querySelector("#beer-types-elements");
     const beerTypesTitle = document.querySelector("#beer-types");
-    const mode = document.querySelector("#switch");
+    const mode = document.querySelector(".switch");
 
   if (mode.classList.contains("light-mode")) {
     if (arrow.classList.contains("down")) {
