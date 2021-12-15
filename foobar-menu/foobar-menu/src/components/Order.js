@@ -26,10 +26,14 @@ export default function Order({order, removeBeer, setOrder, addBeer, substractBe
 }
 
 function openPayment() {
-  document.querySelector("#form-wrapper").classList.remove("hidden");
-  console.log("open")
+  if (mapped.length < 1 ) {
+    document.querySelector("#orderSent").classList.remove("hidden");
+    setTimeout(hideAlert, 3000)
+  } else {
+    document.querySelector("#form-wrapper").classList.remove("hidden");
+    console.log("open")
+  }
 }
-
 
 function hideAlert() {
   document.querySelector("#orderSent").classList.add("hidden");
@@ -51,24 +55,6 @@ const mapped = order.map((beer) => (<div className={`your-product ${beer.name}`}
 <div id="close" className="close-lightmode" onClick={() => removeBeer(beer.name)}></div>
 </div>))
 
-function sendOrder() {
-  if (mapped.length < 1) {
-    console.log("order empty");
-    orderSent();
-  } else {
-  console.log("sent");
-  setOrder([]);
-  orderSent();
-  }
-}
-
-function orderSent() {
-  if (mapped.length > 0 ) {
-  document.querySelector("#orderSent").classList.remove("hidden");
-  setTimeout(hideAlert, 3000)
-  }
-}
-
 
     return(
       <div id="order">
@@ -80,13 +66,12 @@ function orderSent() {
         </div>
         <div className="summary">
         <p className="total"><span>Total: </span>{addTotal()}dkk</p>
-        <p id="orderSent" className="hidden">Your order has been sent!</p>
+        <p id="orderSent" className="hidden">Your order is empty!</p>
           <div className="order-buttons">
-            <button onClick={sendOrder} id="send-order" className="button-lightmode">Send order</button>
-            <button onClick={openPayment} id="pay" className="button-lightmode">Pay</button>
+            <button onClick={openPayment} id="pay" className="button-lightmode">Send & pay</button>
           </div>
       </div>
-      <Payment enableDarkMode={enableDarkMode} disableDarkMode={disableDarkMode}/>
+      <Payment enableDarkMode={enableDarkMode} disableDarkMode={disableDarkMode} addTotal={addTotal} setOrder={setOrder}/>
       </div>
       </div>
     )

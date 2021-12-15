@@ -155,7 +155,7 @@ export default function Payment(props) {
         </div>
         <div className="expiry-security">
           <div className="expiryDateContainer">
-            <label className="expiryDate" htmlFor="expiryMonth"> Expiry Date</label>
+            <label className="expiryDate" htmlFor="expiryMonth">Expiry Date</label>
             <div className="expiryInputs">
               <div className="expiryMonthDiv">
                 <input
@@ -198,11 +198,12 @@ export default function Payment(props) {
             />
           </label>
         </div>
+        <p id="total-repeat"><span>Total:</span> {props.addTotal()}dkk</p>
         <button type="submit" className="payButton" onClick={showThankYou}>Complete order</button>
       </form>
       </div>
       </div>
-      <Thankyou enableDarkMode={props.enableDarkMode} disableDarkMode={props.disableDarkMode} />
+      <Thankyou enableDarkMode={props.enableDarkMode} disableDarkMode={props.disableDarkMode} setOrder={props.setOrder}/>
       </>
     )
   }

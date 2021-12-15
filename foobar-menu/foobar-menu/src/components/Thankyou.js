@@ -5,6 +5,7 @@ export default function Thankyou(props) {
     function goBack() {
         document.querySelector("#thank-you").classList.add("hidden");
         document.querySelector("#form-wrapper").classList.add("hidden");
+        props.setOrder([]);
     }
 
     return(

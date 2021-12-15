@@ -747,7 +747,7 @@ input {
   width: 40%;
   margin: auto;
   cursor: pointer;
-  margin-top: 2rem;
+  margin-top: 1rem;
   border: none;
   border-top: solid 3px var(--light-green);
   color: var(--light-green);
@@ -808,6 +808,17 @@ input::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance:textfield;
+}
+
+#total-repeat {
+  font-family: var(--regular);
+  color: var(--dark-grey);
+  text-align: center;
+  font-size: 2vw;
+}
+
+#total-repeat span {
+  font-family: var(--semiBold);
 }
 
 @media only screen and (max-width: 900px) {
@@ -1256,7 +1267,11 @@ input[type="number"] {
   /*payment form*/
 
   .payButton {
-    margin-top: 5vh;
+    margin-top: 1vh;
+  }
+
+    #total-repeat {
+      font-size: 5vw;
   }
 
   /*thank you*/
