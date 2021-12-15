@@ -928,7 +928,7 @@ input[type="number"] {
 
 /*mobile view*/
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 
   body {
     overflow-y: auto;
