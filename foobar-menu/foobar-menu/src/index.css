@@ -743,22 +743,41 @@ input {
 .securityCode input {
   width: 4rem;
 }
+
+.payment-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .payButton {
   width: 40%;
   margin: auto;
   cursor: pointer;
   margin-top: 1rem;
   border: none;
-  border-top: solid 3px var(--light-green);
-  color: var(--light-green);
+  border-top: solid 3px var(--dark-grey);
+  color: var(--dark-grey);
   background: transparent;
   font-family: var(--semiBold);
   font-size: 2rem;
 }
 
-.darkmode .payButton {
-  border-top: solid 3px var(--yellow);
-  color: var(--yellow);
+.backToMenu {
+  width: 40%;
+  margin: auto;
+  cursor: pointer;
+  margin-top: 1rem;
+  border: none;
+  border-top: solid 3px var(--light-grey);
+  color: var(--light-grey);
+  background: transparent;
+  font-family: var(--semiBold);
+  font-size: 2rem;
+}
+
+.darkmode .backToMenu {
+  opacity: 0.7;
 }
 
 p {

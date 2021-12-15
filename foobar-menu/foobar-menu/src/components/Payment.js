@@ -35,6 +35,10 @@ export default function Payment(props) {
     }
   }
 
+  function backToMenu() {
+    document.querySelector("#form-wrapper").classList.add("hidden");
+  }
+
   function switchMode() {
         const switchButton = document.querySelector(".paymentSwitch");
         const logo = document.querySelector(".paymentLogo");
@@ -199,7 +203,10 @@ export default function Payment(props) {
           </label>
         </div>
         <p id="total-repeat"><span>Total:</span> {props.addTotal()}dkk</p>
+        <div className="payment-buttons">
+        <button className="backToMenu" onClick={backToMenu}>Back to menu</button>
         <button type="submit" className="payButton" onClick={showThankYou}>Complete order</button>
+        </div>
       </form>
       </div>
       </div>
