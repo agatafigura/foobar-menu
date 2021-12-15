@@ -5,6 +5,7 @@ export default function PopUp(props) {
         props.setOpen(false);
     }
     return (
+        <div className="pop-up-wrapper">
         <div className="pop-up">
             <div className="beer-bg">
                 <div className="title">
@@ -50,6 +51,7 @@ export default function PopUp(props) {
                 </div>
                 <div id="close-popup" className="close-lightmode" onClick={closePopUp}></div>
             </div>
+        </div>
         </div>
     )
 }
