@@ -943,6 +943,27 @@ input[type="number"] {
     display: none;
   }
 
+
+  .backToMenu {
+    font-size: 5vw;
+    margin: 0;
+    padding: 0;
+    width: 30vw;
+  }
+
+  .payButton {
+    font-size: 5vw;
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+    width: 30vw;
+  }
+
+  .payment-buttons {
+    column-gap: 4vw;
+  }
+
+
   /*header*/
 
   .header, .paymentHeader {
@@ -1292,10 +1313,6 @@ input[type="number"] {
   }
 
   /*payment form*/
-
-  .payButton {
-    margin-top: 1vh;
-  }
 
     #total-repeat {
       font-size: 5vw;
