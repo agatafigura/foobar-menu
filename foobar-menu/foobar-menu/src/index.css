@@ -297,7 +297,7 @@ body {
 }
 
 .your-products::-webkit-scrollbar {
-  width: thin;
+  width: 0.7vw;
   background: var(--light-grey);
 }
 
