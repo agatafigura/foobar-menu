@@ -294,7 +294,15 @@ body {
   padding-top: 1vw;
   padding-bottom: 1vw;
   border-radius: 10px;
-  
+}
+
+.your-products::-webkit-scrollbar {
+  width: thin;
+  background: var(--light-grey);
+}
+
+.your-products::-webkit-scrollbar-thumb {
+  background: var(--dark-grey);
 }
 
 .your-product {
