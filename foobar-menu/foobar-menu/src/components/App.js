@@ -128,7 +128,7 @@ export default function App() {
   }
 
   useEffect(() => {
-    fetch("https://foobarpm.herokuapp.com/beertypes", {
+    fetch("https://foobar-menu.herokuapp.com/beertypes", {
       method: "get",
       headers: {
         "Content-Type": "application/json; charset=utf-8",
